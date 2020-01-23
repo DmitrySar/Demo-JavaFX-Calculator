@@ -9,39 +9,35 @@ import javafx.scene.layout.GridPane;
 
 public class Controller {
 
-    private final long INIT_VALUE = 0;
-    private long[] mem = {INIT_VALUE, INIT_VALUE};
-    private String operation = "";
-    private int index = 0;
-
+    private Parse parse = new Parse();
     @FXML
     TextField text;
     @FXML
     GridPane pane;
     @FXML
     private void choiceNumber(ActionEvent actionEvent) {
-        mem[index] = Long.valueOf(text.getText() + ((Button) actionEvent.getSource()).getText());
-        text.setText(String.valueOf(mem[index]));
+        String indicatorText = text.getText();
+        String num = ((Button) actionEvent.getSource()).getText();
+        indicatorText = indicatorText + num;
+        if (indicatorText.length() > 1 && indicatorText.charAt(0) == '0') {
+            indicatorText = indicatorText.substring(1);
+        }
+        text.setText(indicatorText);
     }
     @FXML
     private void clearIndicator() {
         text.setText("0");
-        mem[0] = INIT_VALUE;
-        mem[1] = INIT_VALUE;
-        index = 0;
     }
     @FXML
     private void choiceOperation(ActionEvent actionEvent) {
-        operation = ((Button) actionEvent.getSource()).getText();
+        parse.setOperation(((Button) actionEvent.getSource()).getText());
+        parse.addNumber(text.getText());
         text.setText("");
-        index = 1 - index;
     }
     @FXML
     private void getResult() {
-        long result = new Calculator(mem[0], mem[1], operation).getResult();
-        clearIndicator();
-        text.setText(String.valueOf(result));
-        mem[0] = result;
+        parse.addNumber(text.getText());
+        text.setText(String.valueOf(new Calculator(parse.getA(), parse.getB(), parse.getOperation()).getResult()));
     }
 
 }
