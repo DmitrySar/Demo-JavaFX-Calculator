@@ -4,40 +4,61 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 
 public class Controller {
 
-    private Parse parse = new Parse();
+    private IAtomicCalc calc;
+    private String a;
+    private String b;
+    private String indicatorValue = "";
+
     @FXML
-    TextField text;
-    @FXML
-    GridPane pane;
+    TextField indicator;
     @FXML
     private void choiceNumber(ActionEvent actionEvent) {
-        String indicatorText = text.getText();
         String num = ((Button) actionEvent.getSource()).getText();
-        indicatorText = indicatorText + num;
-        if (indicatorText.length() > 1 && indicatorText.charAt(0) == '0') {
-            indicatorText = indicatorText.substring(1);
-        }
-        text.setText(indicatorText);
+        indicatorValue += num;
+        indicator.setText(indicatorValue);
+    }
+
+    @FXML
+    private void plus(ActionEvent actionEvent) {
+        calc = new Plus();
+        setA(((Button) actionEvent.getSource()).getText());
+
+    }
+    @FXML
+    private void minus(ActionEvent actionEvent) {
+        calc = new Minus();
+        setA(((Button) actionEvent.getSource()).getText());
+    }
+    @FXML
+    private void division(ActionEvent actionEvent) {
+        calc = new Division();
+        setA(((Button) actionEvent.getSource()).getText());
+    }
+    @FXML
+    private void multiplication(ActionEvent actionEvent) {
+        calc = new Multiplication();
+        setA(((Button) actionEvent.getSource()).getText());
     }
     @FXML
     private void clearIndicator() {
-        text.setText("0");
-    }
-    @FXML
-    private void choiceOperation(ActionEvent actionEvent) {
-        parse.setOperation(((Button) actionEvent.getSource()).getText());
-        parse.addNumber(text.getText());
-        text.setText("");
+        indicatorValue = "";
+        indicator.setText("0");
     }
     @FXML
     private void getResult() {
-        parse.addNumber(text.getText());
-        text.setText(String.valueOf(new Calculator(parse.getA(), parse.getB(), parse.getOperation()).getResult()));
+        b = indicatorValue;
+        clearIndicator();
+        indicator.setText(calc.getResult(a, b));
+    }
+
+    private void setA(String value) {
+        a = indicator.getText();
+        indicatorValue = "";
+        indicator.setText(value);
     }
 
 }

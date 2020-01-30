@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <TextField fx:id="text" alignment="CENTER_RIGHT" editable="false" layoutX="23.0" layoutY="14.0" prefHeight="66.0" prefWidth="372.0" text="0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="14.0">
+      <TextField fx:id="indicator" alignment="CENTER_RIGHT" editable="false" layoutX="23.0" layoutY="14.0" prefHeight="66.0" prefWidth="372.0" text="0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Agency FB Bold" size="34.0" />
          </font></TextField>
@@ -19,7 +19,7 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
          <children>
-            <Button mnemonicParsing="false" onAction="#choiceNumber" prefHeight="46.0" prefWidth="90.0" text="7">
+            <Button id="number7" mnemonicParsing="false" onAction="#choiceNumber" prefHeight="46.0" prefWidth="90.0" text="7">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -52,7 +52,7 @@
                   <Font name="Agency FB Bold" size="24.0" />
                </font>
             </Button>
-            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#choiceOperation" prefHeight="46.0" prefWidth="90.0" text="/">
+            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#division" prefHeight="46.0" prefWidth="90.0" text="/">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -107,7 +107,7 @@
                   <Font name="Agency FB Bold" size="24.0" />
                </font>
                </Button>
-               <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#choiceOperation" prefHeight="46.0" prefWidth="90.0" text="*">
+               <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#multiplication" prefHeight="46.0" prefWidth="90.0" text="*">
                    <padding>
                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                    </padding>
@@ -161,7 +161,7 @@
                   <Font name="Agency FB Bold" size="24.0" />
                </font>
             </Button>
-            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#choiceOperation" prefHeight="46.0" prefWidth="90.0" text="+">
+            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#plus" prefHeight="46.0" prefWidth="90.0" text="+">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -215,7 +215,7 @@
                   <Font name="Agency FB Bold" size="24.0" />
                </font>
             </Button>
-            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#choiceOperation" prefHeight="46.0" prefWidth="90.0" text="-">
+            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#minus" prefHeight="46.0" prefWidth="90.0" text="-">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
