@@ -5,13 +5,13 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="391.0" prefWidth="420.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <TextField fx:id="indicator" alignment="CENTER_RIGHT" editable="false" layoutX="23.0" layoutY="14.0" prefHeight="66.0" prefWidth="372.0" text="0" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Agency FB Bold" size="34.0" />
          </font></TextField>
-      <HBox layoutX="14.0" layoutY="80.0" prefHeight="66.0" prefWidth="392.0">
+      <HBox layoutX="14.0" layoutY="80.0" prefHeight="66.0" prefWidth="392.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="140.0">
          <opaqueInsets>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </opaqueInsets>
@@ -66,7 +66,7 @@
          </children>
       </HBox>
 
-       <HBox layoutX="14.0" layoutY="146.0" prefHeight="66.0" prefWidth="392.0">
+       <HBox layoutX="14.0" layoutY="146.0" prefHeight="66.0" prefWidth="392.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="200.0">
            <opaqueInsets>
                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
            </opaqueInsets>
@@ -107,7 +107,7 @@
                   <Font name="Agency FB Bold" size="24.0" />
                </font>
                </Button>
-               <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#multiplication" prefHeight="46.0" prefWidth="90.0" text="*">
+               <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#multiplication" prefHeight="46.0" prefWidth="90.0" text="X">
                    <padding>
                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                    </padding>
@@ -120,7 +120,7 @@
                </Button>
            </children>
        </HBox>
-      <HBox layoutX="14.0" layoutY="212.0" prefHeight="66.0" prefWidth="392.0">
+      <HBox layoutX="14.0" layoutY="212.0" prefHeight="66.0" prefWidth="392.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="260.0">
          <opaqueInsets>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </opaqueInsets>
@@ -174,7 +174,7 @@
             </Button>
          </children>
       </HBox>
-      <HBox layoutX="14.0" layoutY="278.0" prefHeight="66.0" prefWidth="392.0">
+      <HBox layoutX="14.0" layoutY="278.0" prefHeight="66.0" prefWidth="392.0" AnchorPane.topAnchor="320.0">
          <opaqueInsets>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </opaqueInsets>
@@ -183,17 +183,6 @@
          </padding>
          <children>
             <Button mnemonicParsing="false" onAction="#choiceNumber" prefHeight="46.0" prefWidth="90.0" text="0">
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-               <font>
-                  <Font name="Agency FB Bold" size="24.0" />
-               </font>
-            </Button>
-            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#clearIndicator" prefHeight="46.0" prefWidth="90.0" style="-fx-background-color: #da2c2c;" text="C" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
@@ -215,7 +204,72 @@
                   <Font name="Agency FB Bold" size="24.0" />
                </font>
             </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#choiceNumber" prefHeight="46.0" prefWidth="90.0" text=".">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Button>
             <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#minus" prefHeight="46.0" prefWidth="90.0" text="-">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="24.0" layoutY="288.0" prefHeight="66.0" prefWidth="392.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="80.0">
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <children>
+            <Button mnemonicParsing="false" onAction="#openBracket" prefHeight="46.0" prefWidth="90.0" text="(">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="67.0" layoutY="15.0" mnemonicParsing="false" onAction="#closeBracket" prefHeight="46.0" prefWidth="90.0" text=")">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#inversion" prefHeight="46.0" prefWidth="90.0" text="/-/">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Agency FB Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#clearIndicator" prefHeight="46.0" prefWidth="90.0" style="-fx-background-color: #da2c2c;" text="C" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>

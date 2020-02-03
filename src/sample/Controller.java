@@ -8,10 +8,9 @@ import javafx.scene.control.TextField;
 
 public class Controller {
 
-    private IAtomicCalc calc;
-    private String a;
-    private String b;
+    private ICalculator calc;
     private String indicatorValue = "";
+    private Calculators calcs = new Calculators();
 
     @FXML
     TextField indicator;
@@ -24,23 +23,23 @@ public class Controller {
 
     @FXML
     private void plus(ActionEvent actionEvent) {
-        calc = new Plus();
+        calc = new Calculator(new Plus());
         setA(((Button) actionEvent.getSource()).getText());
 
     }
     @FXML
     private void minus(ActionEvent actionEvent) {
-        calc = new Minus();
+        calc = new Calculator(new Minus());
         setA(((Button) actionEvent.getSource()).getText());
     }
     @FXML
     private void division(ActionEvent actionEvent) {
-        calc = new Division();
+        calc = new Calculator(new Division());
         setA(((Button) actionEvent.getSource()).getText());
     }
     @FXML
     private void multiplication(ActionEvent actionEvent) {
-        calc = new Multiplication();
+        calc = new Calculator(new Multiplication());
         setA(((Button) actionEvent.getSource()).getText());
     }
     @FXML
@@ -50,13 +49,32 @@ public class Controller {
     }
     @FXML
     private void getResult() {
-        b = indicatorValue;
+        calc.setB(indicatorValue);
         clearIndicator();
-        indicator.setText(calc.getResult(a, b));
+        indicator.setText(calc.getResult());
+    }
+
+    @FXML
+    private void inversion() {
+        indicator.setText("-" + indicator.getText());
+    }
+
+    @FXML
+    private void openBracket() {
+        calcs.put((Calculator) calc);
+        clearIndicator();
+    }
+
+    @FXML
+    private void closeBracket() {
+        getResult();
+        calc = calcs.get();
+        indicatorValue = indicator.getText();
+        getResult();
     }
 
     private void setA(String value) {
-        a = indicator.getText();
+        calc.setA(indicator.getText());
         indicatorValue = "";
         indicator.setText(value);
     }
