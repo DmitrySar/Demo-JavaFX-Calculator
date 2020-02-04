@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="add initialize value">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javafxCalc/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javafxCalc/sample/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -201,7 +200,8 @@
       <workItem from="1579672586957" duration="15035000" />
       <workItem from="1579765940803" duration="15194000" />
       <workItem from="1580304566530" duration="18334000" />
-      <workItem from="1580733892134" duration="6386000" />
+      <workItem from="1580733892134" duration="6441000" />
+      <workItem from="1580801947156" duration="6175000" />
     </task>
     <task id="LOCAL-00001" summary="create class Parse&#10;move parse from Controller to Parse">
       <created>1579778776105</created>
@@ -238,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580794767302</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bug fix">
+      <created>1580800435758</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580800435759</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +272,7 @@
     <MESSAGE value="rewrite for use OOP principles" />
     <MESSAGE value="add class Calculator&#10;add interface ICalculator&#10;add class Calculators" />
     <MESSAGE value="add initialize value" />
-    <option name="LAST_COMMIT_MESSAGE" value="add initialize value" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>

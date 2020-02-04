@@ -52,18 +52,24 @@ public class Controller {
     private void getResult() {
         calc.setB(indicatorValue);
         clearIndicator();
-        indicator.setText(calc.getResult());
+        indicatorValue = calc.getResult();
+        fixDotZero();
+        indicator.setText(indicatorValue);
     }
 
     @FXML
     private void inversion() {
-        indicator.setText("-" + indicator.getText());
+        IAtomicCalc invert = new Multiplication();
+        indicatorValue = invert.getResult("-1", indicator.getText());
+        fixDotZero();
+        indicator.setText(indicatorValue);
     }
 
     @FXML
     private void openBracket() {
         calcs.put((Calculator) calc);
         clearIndicator();
+        indicator.setText("(");
     }
 
     @FXML
@@ -77,6 +83,12 @@ public class Controller {
         calc.setA(indicator.getText());
         indicatorValue = "";
         indicator.setText(value);
+    }
+
+    private void fixDotZero() {
+        if (indicatorValue.split("\\.")[1].equals("0")) {
+            indicatorValue = indicatorValue.substring(0, indicatorValue.length() - 2);
+        }
     }
 
     @FXML
