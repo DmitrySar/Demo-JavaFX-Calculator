@@ -8,9 +8,10 @@ import javafx.scene.control.TextField;
 
 public class Controller {
 
-    private ICalculator calc;
+    private ICalculator calc = new Calculator(new Multiplication());
     private String indicatorValue = "";
     private Calculators calcs = new Calculators();
+    private final String INIT_VALUE = "1";
 
     @FXML
     TextField indicator;
@@ -77,6 +78,11 @@ public class Controller {
         calc.setA(indicator.getText());
         indicatorValue = "";
         indicator.setText(value);
+    }
+
+    @FXML
+    private void initialize() {
+        calc.setA(INIT_VALUE);
     }
 
 }
