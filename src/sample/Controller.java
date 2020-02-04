@@ -71,7 +71,6 @@ public class Controller {
         getResult();
         calc = calcs.get();
         indicatorValue = indicator.getText();
-        getResult();
     }
 
     private void setA(String value) {
