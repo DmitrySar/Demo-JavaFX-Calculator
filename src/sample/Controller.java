@@ -86,7 +86,7 @@ public class Controller {
     }
 
     private void fixDotZero() {
-        if (indicatorValue.matches("\\.") && indicatorValue.split("\\.")[1].equals("0")) {
+        if (indicatorValue.contains(".") && indicatorValue.split("\\.")[1].equals("0")) {
             indicatorValue = indicatorValue.substring(0, indicatorValue.length() - 2);
         }
     }
