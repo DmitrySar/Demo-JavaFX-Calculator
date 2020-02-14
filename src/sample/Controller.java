@@ -67,7 +67,7 @@ public class Controller {
 
     @FXML
     private void openBracket() {
-        calcs.put((Calculator) calc);
+        calcs.put(calc);
         clearIndicator();
         indicator.setText("(");
     }

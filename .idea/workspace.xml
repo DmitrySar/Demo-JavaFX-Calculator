@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Calculators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Calculators.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +78,11 @@
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -101,19 +107,13 @@
       <recent name="sample" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -125,12 +125,6 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
@@ -201,7 +195,9 @@
       <workItem from="1579765940803" duration="15194000" />
       <workItem from="1580304566530" duration="18334000" />
       <workItem from="1580733892134" duration="6441000" />
-      <workItem from="1580801947156" duration="7993000" />
+      <workItem from="1580801947156" duration="13075000" />
+      <workItem from="1580912692127" duration="2262000" />
+      <workItem from="1581661950195" duration="1393000" />
     </task>
     <task id="LOCAL-00001" summary="create class Parse&#10;move parse from Controller to Parse">
       <created>1579778776105</created>
@@ -259,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580816381791</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bug fix">
+      <created>1580817577234</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1580817577234</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,15 +292,26 @@
     <MESSAGE value="bug fix" />
     <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/sample/Controller.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state width="1237" height="225" key="GridCell.Tab.0.bottom" timestamp="1581663795682">
+      <screen x="-1280" y="-258" width="1280" height="984" />
+    </state>
+    <state width="1237" height="225" key="GridCell.Tab.0.bottom/62.0.1304.768/-1280.-258.1280.984@-1280.-258.1280.984" timestamp="1581663795682" />
+    <state width="1237" height="225" key="GridCell.Tab.0.center" timestamp="1581663795681">
+      <screen x="-1280" y="-258" width="1280" height="984" />
+    </state>
+    <state width="1237" height="225" key="GridCell.Tab.0.center/62.0.1304.768/-1280.-258.1280.984@-1280.-258.1280.984" timestamp="1581663795681" />
+    <state width="1237" height="225" key="GridCell.Tab.0.left" timestamp="1581663795681">
+      <screen x="-1280" y="-258" width="1280" height="984" />
+    </state>
+    <state width="1237" height="225" key="GridCell.Tab.0.left/62.0.1304.768/-1280.-258.1280.984@-1280.-258.1280.984" timestamp="1581663795681" />
+    <state width="1237" height="225" key="GridCell.Tab.0.right" timestamp="1581663795682">
+      <screen x="-1280" y="-258" width="1280" height="984" />
+    </state>
+    <state width="1237" height="225" key="GridCell.Tab.0.right/62.0.1304.768/-1280.-258.1280.984@-1280.-258.1280.984" timestamp="1581663795682" />
+    <state x="-944" y="59" key="com.intellij.ide.util.TipDialog" timestamp="1580912715118">
+      <screen x="-1280" y="-258" width="1280" height="984" />
+    </state>
+    <state x="-944" y="59" key="com.intellij.ide.util.TipDialog/62.0.1304.768/-1280.-258.1280.984@-1280.-258.1280.984" timestamp="1580912715118" />
   </component>
 </project>

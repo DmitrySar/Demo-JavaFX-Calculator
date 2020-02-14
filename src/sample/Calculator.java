@@ -23,12 +23,4 @@ public class Calculator implements ICalculator {
         return calc.getResult(a, b);
     }
 
-    public String getA() {
-        return a;
-    }
-
-    public String getB() {
-        return b;
-    }
-
 }
